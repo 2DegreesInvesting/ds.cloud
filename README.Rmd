@@ -1,0 +1,42 @@
+---
+output: github_document
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+The goal of this ...
+
+At the end of this series you will be able to do things like these:
+
+## Who is the audience?
+
+...
+
+## Why is this important?
+
+...
+
+## Syllabus
+
+### ...
+
+This meetup ...
+
+### Next
+
+* ...
+
+## Resources
+
+* YouTube [playlist](https://bit.ly/ds-incubator-videos).
+* The
+[ds-incubator](https://github.com/2DegreesInvesting/ds-incubator#ds-incubator)
+project.
+* [Ideas](https://bit.ly/dsi-ideas) for future meetups.
+* TODO: Add specific resources.
+
