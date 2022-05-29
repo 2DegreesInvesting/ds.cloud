@@ -9,13 +9,22 @@ knitr::opts_chunk$set(
 )
 ```
 
-The goal of this ...
+The goal of this series is to introduce you to cloud computing. 
 
 At the end of this series you will be able to do things like these:
 
+* Understand what cloud computing is.
+* Understand what are the benefits of cloud computing.
+* Choose, use, and customize your RStudio environment on the cloud.
+* Scale up/down your commuting resources on the cloud.
+* Run and monitor a long process unattended on the cloud.
+* Access shared data on the cloud.
+* Store and copy data from and to the cloud.
+
 ## Who is the audience?
 
-...
+Anyone who might benefit from cloud computing, including organizations,
+researchers, and developers.
 
 ## Why is this important?
 
@@ -23,13 +32,23 @@ At the end of this series you will be able to do things like these:
 
 ## Syllabus
 
-### ...
+### Understanding and basic usage of cloud computing 
 
-This meetup ...
+This meetup helps you understand what cloud computing is.
 
-### Next
+Objectives:
 
-* ...
+* Understand what cloud computing is.
+* Understand what are the benefits of cloud computing.
+* Scale up/down your commuting resources on the cloud.
+* Use an application on the cloud.
+
+### Next (tentative)
+
+* Choose, use, and customize your RStudio environment on the cloud.
+* Run and monitor a long process unattended on the cloud.
+* Access shared data on the cloud.
+* Store and copy data from and to the cloud.
 
 ## Resources
 
@@ -38,5 +57,5 @@ This meetup ...
 [ds-incubator](https://github.com/2DegreesInvesting/ds-incubator#ds-incubator)
 project.
 * [Ideas](https://bit.ly/dsi-ideas) for future meetups.
-* TODO: Add specific resources.
+* [An introduction to cloud computing](https://www.digitalocean.com/community/tutorials/a-general-introduction-to-cloud-computing).
 
