@@ -46,7 +46,7 @@ Hostname > Create Droplet.
  
 ### Explore your droplet from the console
 
-Note this message help you connet to your droplet from your own console.
+Note this message:
 
 ```bash
 Welcome to DigitalOcean's 1-Click Docker Droplet.
