@@ -39,14 +39,17 @@ For students/interns.
 
 [Take an interactive tour of DigitalOcean](https://www.digitalocean.com/try/developer-brand#tour).
 
+* Sign up/login to https://www.digitalocean.com/
+* Create/choose a project.
+* Create > Droplets > Marketplace > Docker > Basic ($5) > Region > SSH >
+Hostname > Create Droplet.
+ 
 ### Explore your droplet from the console
 
 Your droplet is like any other system running Ubuntu.
 
 ```bash
-pwd
 whoami
-echo $HOME
 cd ~
 ls -A
 ls /
@@ -55,8 +58,8 @@ ls /
 And it has Docker installed.
 
 ```bash
-docker images
 docker run hello-world
+docker images
 ```
 
 You can use it to run any docker image, e.g. rocker/rstudio
@@ -66,6 +69,6 @@ You can use it to run any docker image, e.g. rocker/rstudio
 docker run -e PASSWORD=yourpassword --rm -p 8787:8787 rocker/rstudio
 ```
 
-Point your browser to ipv4:8787. Log in with user/password rstudio/yourpassword. 
+Point your browser to [ipv4]:8787. Log in with user/password rstudio/yourpassword. 
 
 See also https://github.com/2DegreesInvesting/ds.docker
