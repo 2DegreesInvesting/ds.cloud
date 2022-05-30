@@ -32,7 +32,7 @@ For students/interns.
 
 ### Explore your droplet from the console
 
-Orient yourself.
+Your droplet is like any other system running Ubuntu.
 
 ```bash
 pwd
@@ -41,10 +41,16 @@ echo $HOME
 cd ~
 ls -A
 ls /
-docker images
 ```
 
-Run RStudio
+And it has Docker installed.
+
+```bash
+docker images
+docker run hello-world
+```
+
+You can use it to run any docker image, e.g. rocker/rstudio
 
 ```bash
 # https://www.rocker-project.org/
