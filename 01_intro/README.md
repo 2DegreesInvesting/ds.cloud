@@ -46,6 +46,22 @@ Hostname > Create Droplet.
  
 ### Explore your droplet from the console
 
+Note this message help you connet to your droplet from your own console.
+
+```bash
+********************************************************************************
+
+Welcome to DigitalOcean's 1-Click Docker Droplet.
+
+...
+
+* You can SSH to this Droplet in a terminal as root: ssh root@the.server.ipv4.address
+
+...
+
+********************************************************************************
+```
+
 Your droplet is like any other system running Ubuntu.
 
 ```bash
