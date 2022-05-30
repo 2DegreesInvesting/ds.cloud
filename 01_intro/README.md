@@ -49,8 +49,6 @@ Hostname > Create Droplet.
 Note this message help you connet to your droplet from your own console.
 
 ```bash
-********************************************************************************
-
 Welcome to DigitalOcean's 1-Click Docker Droplet.
 
 ...
@@ -59,7 +57,6 @@ Welcome to DigitalOcean's 1-Click Docker Droplet.
 
 ...
 
-********************************************************************************
 ```
 
 Your droplet is like any other system running Ubuntu.
