@@ -2,12 +2,7 @@
 output: github_document
 ---
 
-```{r, include = FALSE}
-knitr::opts_chunk$set(
-  collapse = TRUE,
-  comment = "#>"
-)
-```
+
 
 The goal of this series is to help you understand and use to cloud
 computing.
