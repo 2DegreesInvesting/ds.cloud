@@ -2,6 +2,15 @@
 
 ### What is cloud computing?
 
+Cloud computing is the delivery of computing resources as a service,
+meaning that the resources are owned and managed by the cloud provider
+rather than the end user. Those resources may be:
+
+* browser-based software applications, e.g. Netflix.
+* data storage for photos and other digital media, e.g. Dropbox.
+* Servers to run computations, for research, e.g. a DigitalOcean droplet
+with RStudio.
+
 ### What are the benefits?
 
 For an organization:
@@ -26,7 +35,7 @@ For students/interns.
 * Get immedate access to a functional computing environment and data.
 * Don't waste limited time installing software or downloading data.
 
-### Setup a droplet on DigitalOcean, with Docker on Ubuntu.
+### Setup DigitalOcean droplet with RStudio
 
 [Take an interactive tour of DigitalOcean](https://www.digitalocean.com/try/developer-brand#tour).
 
