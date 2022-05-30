@@ -68,6 +68,8 @@ ls -A
 ls /
 ```
 
+(https://github.com/2DegreesInvesting/ds.terminal)
+
 And it has Docker installed.
 
 ```bash
@@ -84,4 +86,4 @@ docker run -e PASSWORD=yourpassword --rm -p 8787:8787 rocker/rstudio
 
 Point your browser to [ipv4]:8787. Log in with user/password rstudio/yourpassword. 
 
-See also https://github.com/2DegreesInvesting/ds.docker
+(https://github.com/2DegreesInvesting/ds.docker)
