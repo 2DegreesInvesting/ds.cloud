@@ -4,36 +4,38 @@
 
 Cloud computing is the delivery of computing resources as a service,
 meaning that the resources are owned and managed by the cloud provider
-rather than the end user. Those resources may be:
+rather than the end user. 
 
-* browser-based software applications, e.g. Netflix;
-* data storage for photos and other digital media, e.g. Dropbox;
-* servers to run computations, for research, e.g. a DigitalOcean droplet
-with RStudio.
+The computing resources might be:
+
+* browser-based software applications, e.g. a Shiny app;
+* data storage, e.g. Dropbox;
+* servers to analyze data, e.g. a DigitalOcean droplet running RStudio
+Server.
 
 ### What are the benefits?
 
-For an organization:
+As an organization:
 
-* Save $. Buy basic, cheap computers, and rent powerful ones when you
-need them.
-* Don't worry about your computers getting old, breaking, or loosing value.
+* Save $. We can buy cheap, basic computers, and rent powerful servers when we need them.
+* We don't worry about your computers getting old, breaking, or loosing value.
 
-For researchers:
+As researchers:
 
-* Access the computing resources you need when you need them.
-* Avoid the slow, painful HR processes to buy/install the tools you need.
+* We can access the computing resources we need when you need them.
+* We can avoid the slow, painful HR processes to required to buy the
+hardware or install the sofware we need.
 
-For developers:
+As developers:
 
-* Access immediately the right tool for the job at hand. 
-* Don't waste time building low-level infrastructure. Instead build on
-top of robust "templates".
+* We can easily get the right tool for the job at hand. 
+* We don't waste time building low-level infrastructure. Instead we
+build on top of robust "templates".
 
-For students/interns.
+As students/interns.
 
-* Get immedate access to a functional computing environment and data.
-* Don't waste limited time installing software or downloading data.
+* We can access easily a functional computing environment and data.
+* Don't waste our limited time installing software or downloading data.
 
 ### Setup DigitalOcean droplet with RStudio
 
@@ -41,8 +43,7 @@ For students/interns.
 
 * Sign up/login to https://www.digitalocean.com/
 * Create/choose a project.
-* Create > Droplets > Marketplace > Docker > Basic ($5) > Region > SSH >
-Hostname > Create Droplet.
+* Create > Droplets > Marketplace > Docker > ... (defaults)
  
 ### Explore your droplet from the console
 
