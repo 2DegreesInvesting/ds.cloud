@@ -9,8 +9,7 @@ knitr::opts_chunk$set(
 )
 ```
 
-The goal of this series is to help you understand and use to cloud
-computing.
+The goal of this series is to help you understand and use cloud computing.
 
 At the end of this series you will be able to do things like these:
 
@@ -46,7 +45,8 @@ Objectives:
 * Understand what cloud computing is.
 * Understand what are the benefits of cloud computing.
 * Setup a droplet on DigitalOcean, with Docker on Ubuntu.
-* Connect to your droplet via ssh.
+* Explore your droplet from the console.
+* Run RStudio.
 
 ### Next (tentative)
 
