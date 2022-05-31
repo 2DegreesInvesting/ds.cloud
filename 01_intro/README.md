@@ -37,13 +37,10 @@ As students/interns.
 * We can access easily a functional computing environment and data.
 * Don't waste our limited time installing software or downloading data.
 
-### Setup DigitalOcean droplet with RStudio
+### Setup a DigitalOcean droplet with docker and run RStudio
 
-[Take an interactive tour of DigitalOcean](https://www.digitalocean.com/try/developer-brand#tour).
-
-* Sign up/login to https://www.digitalocean.com/
-* Create/choose a project.
-* Create > Droplets > Marketplace > Docker > ... (defaults)
+* Demo
+* You may also [Take an interactive tour of DigitalOcean](https://www.digitalocean.com/try/developer-brand#tour).
  
 ### Explore your droplet from the console
 
