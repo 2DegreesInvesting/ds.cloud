@@ -42,16 +42,12 @@ Objectives:
 
 ### Next (tentative)
 
-* Use case: Run RStudio with geospatial packages.
-* Scale up/down your resources on the cloud.
+* Scale cloud resources up and down
+* Use case: Run RStudio with useful packages pre-installed.
 * Use case: Run long processes unattended.
-* Monitor process.
-* Use case: Access private data, shared only within an organization.
-* Use pins.
-* Store and copy data from and to the cloud.
-* Use case: Access private websites, shared only within an organization.
-* Access/publish static websites.
-* Access/publish shiny apps.
+* Use case: Publish/access private data.
+* Use case: Publish/access static websites -- public and private.
+* Use case: Publish/access shiny apps
 
 ## Resources
 
