@@ -18,12 +18,15 @@ ssh root@your.ipv4.address
 
 Use a docker image that gives you most of what you need ([see great options](https://www.rocker-project.org/images/)).
 
-Say you want to use the tidyverse and rmarkdown. A basic computer doesn't work out of the box.
+Say you want to use the tidyverse and rmarkdown. A basic computer doesn't work
+out of the box.
 
 ```bash
 # https://www.rocker-project.org/
 docker run -e PASSWORD=yourpassword --rm -p 8787:8787 rocker/rstudio
 ```
+
+Go to `https://{ipv4}:8787` and log in as "rstudio" with "yourpassword".
 
 ```R
 > library(tidyverse)
@@ -39,9 +42,6 @@ A more complete computer does work out of the box.
 library(tidyverse)
 library(rmarkdown)
 ```
-
-* Point your browser to https://your.ipv4.address:8787
-* Log in as "rstudio" with "yourpassword".
 
 ### How to move data to/from RStudio on the cloud?
 
