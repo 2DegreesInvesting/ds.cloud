@@ -55,6 +55,8 @@ Resources:
 
 ### Use case: Run long processes unattended
 
+> As an analyst ... TODO
+
 ```bash
 docker run -d --name myjob -e PASSWORD=123 -p 8787:8787 rocker/verse
 ```
@@ -88,18 +90,10 @@ Note that _local jobs ... will be shut down if R is_ but _while your R session
 is running jobs ... your R session will not be suspended (on RStudio Server)_.
 -- <https://www.rstudio.com/blog/rstudio-1-2-jobs/>
 
-* Monitor progress.
+* Monitor: How many files have been saved?
 
 ```bash
-# From outside the container
-# What docker containers are running?
-docker ps
-
-# From inside the container
-# What processes are running inside the container myjob?
-docker exec myjob ps -F
-# How many files have been saved?
-docker exec myjob ls -t /home/rstudio/abc | head
+docker exec myjob ls /home/rstudio/abc -t
 ```
 
 Learn more:
