@@ -105,6 +105,9 @@ Resources:
 
 ### Use case: Host shiny apps
 
+> As an analyst I would like to publish an unlimited number of shiny apps as
+cheaply as possible so that I can try new ideas and share insights.
+
 * Create apps in an environment like this one:
 
 ```bash
