@@ -55,7 +55,8 @@ Resources:
 
 ### Use case: Run long processes unattended
 
-> As an analyst ... TODO
+> As an analyst I would like to have a way to run a long analysis unattended, so
+that I can turn off my laptop and do something else while the process runs.
 
 ```bash
 docker run -d --name myjob -e PASSWORD=123 -p 8787:8787 rocker/verse
