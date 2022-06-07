@@ -125,7 +125,7 @@ docker run --rm -d -p 3838:3838 \
     rocker/shiny
 ```
 
-Access the apps at `http://{ipv4}:3838/{app-dir`, e.g.:
+Access the apps at `http://{ipv4}:3838/{app-dir}`, e.g.:
 
 * <http://174.138.4.109:3838/app1/>
 * <http://174.138.4.109:3838/app2/>
