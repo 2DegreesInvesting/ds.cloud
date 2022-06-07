@@ -45,11 +45,16 @@ Objectives:
 * Explore your server from the console.
 * Run RStudio Server. 
 
+### Use cases
+
+This meetup presents three use cases:
+
+* Scale your computing resources up and down.
+* Run RStudio with useful packages pre-installed.
+* Run long processes unattended.
+
 ### Next (tentative)
 
-* Scale cloud resources up and down
-* Use case: Run RStudio with useful packages pre-installed.
-* Use case: Run long processes unattended.
 * Use case: Publish/access private data.
 * Use case: Publish/access static websites -- public and private.
 * Use case: Publish/access shiny apps

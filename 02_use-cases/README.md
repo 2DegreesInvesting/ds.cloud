@@ -4,6 +4,10 @@
 
 > As an analyst I would like to have a powerful computer, as cheaply as possible, and whenever I need it.
 
+Resources:
+
+* <https://docs.digitalocean.com/products/droplets/how-to/resize/>
+
 ### Use case: Quickly access a complete and isolated R environment
 
 > As an analyst in a new project I would like to have all the software I need
@@ -26,14 +30,12 @@ out of the box.
 docker run -e PASSWORD=yourpassword --rm -p 8787:8787 rocker/rstudio
 ```
 
-Log in as "rstudio" with "yourpassword" at `https://{ipv4}:8787`, e.g. <https://174.138.4.109:8787>.
+Log in as "rstudio" with "yourpassword" at `https://{ipv4}:8787`, e.g.
+<http://174.138.4.109:8787/>.
 
 ```r
-> library(tidyverse)
-Error in library(tidyverse) : there is no package called ‘tidyverse’
-> library(rmarkdown)
-Error in library(rmarkdown) : there is no package called ‘rmarkdown’
-> 
+library(tidyverse)
+library(rmarkdown)
 ```
   
 A more complete computer does work out of the box.
@@ -46,6 +48,10 @@ docker run -e PASSWORD=yourpassword --rm -p 8787:8787 rocker/verse
 library(tidyverse)
 library(rmarkdown)
 ```
+
+Resources:
+
+* Rocker images: https://www.rocker-project.org/images/
 
 ### Use case: Run long processes unattended
 
@@ -78,27 +84,11 @@ for (i in seq_along(x)) {
 
 <img src=https://i.imgur.com/rWhFj49.png width=700/>
 
-Note:
+Note that _local jobs ... will be shut down if R is_ but _while your R session
+is running jobs ... your R session will not be suspended (on RStudio Server)_.
+-- <https://www.rstudio.com/blog/rstudio-1-2-jobs/>
 
-> Local jobs run as non-interactive child R processes of your main R process,
-which means that they will be shut down if R is. 
-
-But:
-
-> While your R session is running jobs ... Your R session will not be suspended
-(on RStudio Server)
-
-To be sure maybe best to run your script with R outside of RStudio?
-
-```bash
-# Test
-docker exec myjob Rscript -e "print('hello world')"
-
-# Run
-docker exec myjob Rscript -e "source('/home/rstudio/abc/R/job.R')"
-```
-
-Monitor progress.
+* Monitor progress.
 
 ```bash
 # From outside the container
