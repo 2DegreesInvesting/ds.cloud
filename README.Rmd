@@ -56,7 +56,7 @@ This meetup presents three use cases:
 ### Next (tentative)
 
 * Use case: Publish/access private data.
-* Use case: Publish/access static websites -- public and private.
+* Use case: Publish/access a blog -- public and private.
 * Use case: Publish/access shiny apps
 
 ## Resources
