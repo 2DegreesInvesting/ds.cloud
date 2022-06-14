@@ -109,12 +109,11 @@ Resources:
 
 ```bash
 # https://www.rocker-project.org
-docker run -d --rm \
-    --name app \
+docker run --rm -d -p 8787:8787 \
+    -v /mnt:/mnt \
+    --name rstudio \
     -e ROOT=true \
     -e PASSWORD=123 \
-    -p 8787:8787 \
-    -v /mnt:/mnt \
     rocker/verse
 ```
 
@@ -123,6 +122,7 @@ docker run -d --rm \
 ```bash
 # https://hub.docker.com/r/rocker/shiny
 docker run --rm -d -p 3838:3838 \
+    --name shiny \
     -v /srv/shinyapps/:/srv/shiny-server/ \
     -v /srv/shinylogs/:/var/log/shiny-server/ \
     rocker/shiny
