@@ -53,11 +53,14 @@ This meetup presents three use cases:
 * Run RStudio with useful packages pre-installed.
 * Run long processes unattended.
 
+### More use cases
+
+* Use case: Publish/access shiny apps
+
 ### Next (tentative)
 
-* Use case: Publish/access private data.
 * Use case: Publish/access a blog -- public and private.
-* Use case: Publish/access shiny apps
+* Use case: Publish/access private data.
 
 ## Resources
 

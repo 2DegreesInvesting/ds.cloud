@@ -105,9 +105,6 @@ Resources:
 
 ### Use case: Host shiny apps
 
-> As an analyst I would like to publish an unlimited number of shiny apps as
-cheaply as possible so that I can try new ideas and share insights.
-
 * Create apps in an environment like this one:
 
 ```bash
@@ -115,6 +112,8 @@ docker run -d --name app \
     -e ROOT=true \
     -e PASSWORD=123 \
     -p 8787:8787 \
+     # https://www.rocker-project.org/use/shared_volumes
+    -v /mnt:/mnt
     rocker/verse
 ```
 
