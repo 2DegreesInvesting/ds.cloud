@@ -114,13 +114,12 @@ docker run -d --rm \
     -e PASSWORD=123 \
     -p 8787:8787 \
     -v /mnt:/mnt \
-    rocker/shiny-verse
+    rocker/verse
 ```
 
 * Move the apps to /srv/shinyapps/
 
 ```bash
-# https://hub.docker.com/r/rocker/shiny
 docker run --rm -d -p 3838:3838 \
     -v /srv/shinyapps/:/srv/shiny-server/ \
     -v /srv/shinylogs/:/var/log/shiny-server/ \
