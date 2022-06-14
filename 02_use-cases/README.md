@@ -142,12 +142,10 @@ Access the apps at `http://{ipv4}:3838/{app-dir}`, e.g.:
 
 * <http://174.138.4.109:3838/app/>
 * <http://174.138.4.109:3838/app1/>
-* <http://174.138.4.109:3838/app2/>
 
 Resources:
 
 * <https://www.rocker-project.org/images/>
-* <https://www.rocker-project.org/use/shared_volumes>.
+* <https://www.rocker-project.org/use/shared_volumes>
 * <https://hub.docker.com/r/rocker/shiny>
-* <https://github.com/2DegreesInvesting/ds.docker>.
-
+* <https://github.com/2DegreesInvesting/ds.docker>
