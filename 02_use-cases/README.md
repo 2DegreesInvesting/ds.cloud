@@ -120,6 +120,16 @@ docker run --rm -d -p 8787:8787 \
 * Move the apps to /srv/shinyapps/
 
 ```bash
+# From container
+cd ~
+sudo mv app /mnt
+
+# From host (droplet)
+mkdir /srv/shinyapps
+mv /mnt/app /srv/shinyapps
+```
+
+```bash
 # https://hub.docker.com/r/rocker/shiny
 docker run --rm -d -p 3838:3838 \
     --name shiny \
