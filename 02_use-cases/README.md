@@ -108,6 +108,7 @@ Resources:
 * Create apps in an environment like this one:
 
 ```bash
+# https://www.rocker-project.org
 docker run -d --rm \
     --name app \
     -e ROOT=true \
@@ -120,6 +121,7 @@ docker run -d --rm \
 * Move the apps to /srv/shinyapps/
 
 ```bash
+# https://hub.docker.com/r/rocker/shiny
 docker run --rm -d -p 3838:3838 \
     -v /srv/shinyapps/:/srv/shiny-server/ \
     -v /srv/shinylogs/:/var/log/shiny-server/ \
@@ -134,7 +136,7 @@ Access the apps at `http://{ipv4}:3838/{app-dir}`, e.g.:
 Resources:
 
 * <https://www.rocker-project.org/images/>
-* <https://hub.docker.com/r/rocker/shiny>
 * <https://www.rocker-project.org/use/shared_volumes>.
+* <https://hub.docker.com/r/rocker/shiny>
 * <https://github.com/2DegreesInvesting/ds.docker>.
 
