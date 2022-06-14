@@ -49,17 +49,13 @@ Objectives:
 
 This meetup presents three use cases:
 
-* Scale your computing resources up and down.
-* Run RStudio with useful packages pre-installed.
-* Run long processes unattended.
-
-### More use cases
-
-* Use case: Publish/access shiny apps
+1. Scale your computing resources up and down.
+2. Run RStudio with useful packages pre-installed.
+3. Run long processes unattended.
+4. Use case: Publish/access shiny apps.
 
 ### Next (tentative)
 
-* Use case: Publish/access a blog -- public and private.
 * Use case: Publish/access private data.
 
 ## Resources
