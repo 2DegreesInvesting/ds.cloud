@@ -27,6 +27,10 @@ board_team() %>% pin_list()
 board_team() %>% pin_read("mtcars")
 ```
 
+### Share volume across droplests
+
+https://www.digitalocean.com/community/tutorials/how-to-set-up-an-nfs-mount-on-ubuntu-18-04
+
 ### Move data between a droplet and GitHub
 
 ### Move data between a container and GitHub
