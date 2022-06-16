@@ -12,6 +12,21 @@ Resources:
 
 * <https://docs.digitalocean.com/products/volumes/quickstart/>
 
+### Share data between team members with pins
+
+```r
+library(pins)
+
+board_team <- function() {
+  board_folder("/mnt/volume_tilt/pins")
+}
+
+board_team()
+board_team() %>% pin_write(mtcars, "mtcars")
+board_team() %>% pin_list()
+board_team() %>% pin_read("mtcars")
+```
+
 ### Move data between a droplet and GitHub
 
 ### Move data between a container and GitHub
