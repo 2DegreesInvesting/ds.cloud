@@ -1,4 +1,8 @@
+### How to Upload SSH Public Keys to a DigitalOcean Account
 
+https://docs.digitalocean.com/products/droplets/how-to/add-ssh-keys/to-account/
+
+### How to permit multiple users access to the same server/droplet?
 
 https://www.digitalocean.com/community/questions/how-to-permit-multiple-users-access-to-the-same-server-droplet
 
