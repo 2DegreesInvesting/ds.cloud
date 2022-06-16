@@ -149,27 +149,3 @@ Resources:
 * <https://www.rocker-project.org/use/shared_volumes>
 * <https://hub.docker.com/r/rocker/shiny>
 * <https://github.com/2DegreesInvesting/ds.docker>
-
-### Use case: Move data between a droplet and GitHub
-
-### Use case: Move data between a container and GitHub
-
-### Use case: Move data between a droplet and a container
-
-### Use case: Move data between containers
-
-### Use case: Move data between a droplet and your computer
-
-### Use case: Increase disk space to store more data
-
-> As an ananlyst I would like to increase my disk space as my data grows.
-
-* Inspect droplet specifications and size: `df -h`
-* Add a volume to a droplet ($0.10 GiB/month).
-* Find the volume.
-* Inspect droplet specifications and size: `df -h`
-* Resize volume.
-
-Resources:
-
-* <https://docs.digitalocean.com/products/volumes/quickstart/>
