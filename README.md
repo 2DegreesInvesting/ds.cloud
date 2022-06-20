@@ -51,15 +51,12 @@ This meetup helps you manage data.
 Objectives:
 
 -   Increase disk space to store more data.
--   Move data between a droplet and GitHub.
--   Move data between a container and GitHub.
--   Move data between a droplet and a container.
--   Move data between containers.
--   Move data between a droplet and your computer.
+-   Share data across team members with pins.
+-   Move data around.
 
 ### Next (tentative)
 
--   Share data and other resources across users
+-   Share droplets across multiple users.
 
 ## Resources
 

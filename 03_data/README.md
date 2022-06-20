@@ -32,7 +32,7 @@ Resources:
 
 * <https://docs.digitalocean.com/products/volumes/quickstart/>
 
-### Share data between team members with pins
+### Share data across team members with pins
 
 > As an analyst working in a team I would like to have a way to share data
 better than Dropbox.
