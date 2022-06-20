@@ -2,11 +2,31 @@
 
 > As an ananlyst I would like to increase my disk space as my data grows.
 
+Resize: 
+
+* Note resize options under "Storage-Optimized".
+
+* Note resize options under "Disk, CPU and RAM": "This will increase the disk
+size, CPU and RAM of your Droplet. This is a permanent change and cannot be
+reversed."
+
+* Create and attach a volume:
+
+Volumes:
+
 * Inspect droplet specifications and size: `df -h`
-* Add a volume to a droplet ($0.10 GiB/month).
-* Find the volume.
+
+* Add a volume "demo_volume" to a droplet. [Volumes cost $0.10 GiB per month and
+range from 1 GiB to 16 TiB (16,384 GiB). Charges accrue hourly for as long as
+the volume
+exists](https://docs.digitalocean.com/products/volumes/details/pricing/).
+
 * Inspect droplet specifications and size: `df -h`
-* Resize volume.
+
+* Find the volume. ["Volumes are auto-mounted into the /mnt
+directory"](https://docs.digitalocean.com/products/volumes/how-to/create/).
+
+* Note you can increase the size (Volumes > More).
 
 Resources:
 
@@ -14,30 +34,74 @@ Resources:
 
 ### Share data between team members with pins
 
-```r
-library(pins)
+> As an analyst working in a team I would like to have a way to share data
+better than Dropbox.
 
-board_team <- function() {
-  board_folder("/mnt/volume_tilt/pins")
-}
+Each team member may use a different droplet or container, yet share data in a
+volume easily with [pins](https://pins.rstudio.com/).
 
-board_team()
-board_team() %>% pin_write(mtcars, "mtcars")
-board_team() %>% pin_list()
-board_team() %>% pin_read("mtcars")
+* The cloud manager runs something like this:
+
+```bash
+# Linda's container
+docker run -d \
+  --name linda -p 8787:8787 -e PASSWORD=123 \
+  -v /mnt:/mnt  \
+  -e ROOT=true \
+  rocker/verse
+
+# Mauro's container (note different port)
+docker run -d \
+  --name mauro -p 8788:8787 -e PASSWORD=321 \
+  -v /mnt:/mnt  \
+  -e ROOT=true \
+  rocker/verse
+
+# Show running containers
+docker ps
+
+# Inspect permission
+ll /mnt/demo_volume
+# Share
+chmod a+rwx /mnt/demo_volume
+ll /mnt/demo_volume
 ```
 
-### Share volume across droplests
+* The analyst login at `http://ipv4:port`  as "rstudio" with their password,
+then share data with pins.
 
-https://www.digitalocean.com/community/tutorials/how-to-set-up-an-nfs-mount-on-ubuntu-18-04
+```r
+# Linda writes some data
 
-### Move data between a droplet and GitHub
+# install.packages("pins")
+library(pins)
 
-### Move data between a container and GitHub
+board <- board_folder("/mnt/demo_volume")
+board |> pin_write(mtcars, "mtcars")
+board |> pin_list()
+```
 
-### Move data between a droplet and a container
+```r
+# Mauro uses the data that Linda created
 
-### Move data between containers
+# install.packages("pins")
+library(pins)
 
-### Move data between a droplet and your computer
+board <- board_folder("/mnt/demo_volume")
+board |> pin_list()
+board |> pin_read("mtcars")
+```
 
+Resources:
+
+* <https://pins.rstudio.com/>.
+* <https://github.com/2DegreesInvesting/ds.pins>.
+* [Share volume across
+droplets](https://www.digitalocean.com/community/tutorials/how-to-set-up-an-nfs-mount-on-ubuntu-18-04).
+
+### Moving data around
+
+* Move data between a droplet and a container
+* Move data between containers
+* Move data between a droplet or container and GitHub
+* Move data between a droplet and your computer
