@@ -37,10 +37,10 @@ volume easily with [pins](https://pins.rstudio.com/).
 
 ```bash
 # Create a dedicated folder for pins
-mkdir /mnt/volume/shared/pins
+mkdir -p /mnt/volume/shared
 
 # Share it with everyone: Add read/write/execute permission for all
-chmod a+rwx /mnt/volume/shared/pins
+chmod a+rwx /mnt/volume/shared
 ll /mnt/volume
 ```
 
@@ -50,14 +50,14 @@ ll /mnt/volume
 # Linda's container on port 8787
 docker run -d \
   --name linda -p 8787:8787 -e PASSWORD=123 \
-  -v /mnt:/mnt  \
+  -v /mnt/volume/shared:/mnt/volume/shared \
   -e ROOT=true \
   rocker/verse
 
 # Mauro's container on port 8788
 docker run -d \
   --name mauro -p 8788:8787 -e PASSWORD=321 \
-  -v /mnt:/mnt  \
+  -v /mnt/volume/shared:/mnt/volume/shared \
   -e ROOT=true \
   rocker/verse
 
