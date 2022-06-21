@@ -36,7 +36,7 @@ volume easily with [pins](https://pins.rstudio.com/).
 
 ```bash
 # Create a dedicated folder for pins
-mkdir -p /mnt/volume/shared
+mkdir /mnt/volume/shared
 
 # Share it with everyone: Add read/write/execute permission for all
 chmod a+rwx /mnt/volume/shared
