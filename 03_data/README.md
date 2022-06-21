@@ -16,8 +16,7 @@ month](https://docs.digitalocean.com/products/volumes/details/pricing/).
 
 * See information about the droplet's file system: `df -h`.
 
-* Find the volume. ["Volumes are auto-mounted into the /mnt
-directory"](https://docs.digitalocean.com/products/volumes/how-to/create/).
+* Find the volume: `ls /mnt`
 
 * Note you can increase the size (Volumes > More).
 
