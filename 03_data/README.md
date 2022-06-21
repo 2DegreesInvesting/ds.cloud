@@ -4,21 +4,17 @@
 
 Resize: 
 
-* Note resize options under "Storage-Optimized".
+* Note resize options under "Storage-Optimized" and "Disk, CPU and RAM"
 
-* Note resize options under "Disk, CPU and RAM": "This will increase the disk
-size, CPU and RAM of your Droplet. This is a permanent change and cannot be
-reversed."
-
-* Create and attach a volume:
+> "This will increase the disk size, CPU and RAM of your Droplet. This is a
+permanent change and cannot be reversed."
 
 Volumes:
 
-* Inspect droplet specifications and size: `df -h`
+* Add a volume. [Volumes cost $0.10 GiB per
+month](https://docs.digitalocean.com/products/volumes/details/pricing/).
 
-* Add a volume "demovolume" to a droplet. [Volumes cost $0.10 GiB per month](https://docs.digitalocean.com/products/volumes/details/pricing/).
-
-* Inspect droplet specifications and size: `df -h`
+* See information about the droplet's file system: `df -h`.
 
 * Find the volume. ["Volumes are auto-mounted into the /mnt
 directory"](https://docs.digitalocean.com/products/volumes/how-to/create/).
@@ -37,17 +33,28 @@ better than Dropbox.
 Each team member may use a different droplet or container, yet share data in a
 volume easily with [pins](https://pins.rstudio.com/).
 
-* The cloud manager runs something like this:
+* The cloud manager runs creates a folder for shared/ data and pins/:
 
 ```bash
-# Linda's container
+# Create a dedicated folder for pins
+mkdir /mnt/volume/shared/pins
+
+# Share it with everyone: Add read/write/execute permission for all
+chmod a+rwx /mnt/volume/shared/pins
+ll /mnt/volume
+```
+
+* The cloud manager creates a server for each team member:
+
+```bash
+# Linda's container on port 8787
 docker run -d \
   --name linda -p 8787:8787 -e PASSWORD=123 \
   -v /mnt:/mnt  \
   -e ROOT=true \
   rocker/verse
 
-# Mauro's container (note different port)
+# Mauro's container on port 8788
 docker run -d \
   --name mauro -p 8788:8787 -e PASSWORD=321 \
   -v /mnt:/mnt  \
@@ -56,35 +63,27 @@ docker run -d \
 
 # Show running containers
 docker ps
-
-# Create a dedicated folder for pins
-mkdir /mnt/demovolume/pins
-# Share it with everyone: Add read/write/execute permission for all
-chmod a+rwx /mnt/demovolume/pins
-ll /mnt/demovolume
 ```
 
-* The analyst login at `http://ipv4:port`  as "rstudio" with their password,
-then share data with pins.
+* The analysts login at `http://ipv4:their.port`  with username "rstudio" and
+their password, then share data with pins.
 
 ```r
 # Linda writes some data
-
 # install.packages("pins")
 library(pins)
 
-board <- board_folder("/mnt/demovolume/pins")
+board <- board_folder("/mnt/volume/shared/pins")
 board |> pin_write(mtcars, "mtcars")
 board |> pin_list()
 ```
 
 ```r
 # Mauro uses the data that Linda created
-
 # install.packages("pins")
 library(pins)
 
-board <- board_folder("/mnt/demovolume/pins")
+board <- board_folder("/mnt/volume/shared/pins")
 board |> pin_list()
 board |> pin_read("mtcars")
 ```
