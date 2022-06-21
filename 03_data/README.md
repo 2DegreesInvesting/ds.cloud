@@ -16,10 +16,7 @@ Volumes:
 
 * Inspect droplet specifications and size: `df -h`
 
-* Add a volume "demo_volume" to a droplet. [Volumes cost $0.10 GiB per month and
-range from 1 GiB to 16 TiB (16,384 GiB). Charges accrue hourly for as long as
-the volume
-exists](https://docs.digitalocean.com/products/volumes/details/pricing/).
+* Add a volume "demovolume" to a droplet. [Volumes cost $0.10 GiB per month](https://docs.digitalocean.com/products/volumes/details/pricing/).
 
 * Inspect droplet specifications and size: `df -h`
 
@@ -60,11 +57,11 @@ docker run -d \
 # Show running containers
 docker ps
 
-# Inspect permission
-ll /mnt/demo_volume
-# Share
-chmod a+rwx /mnt/demo_volume
-ll /mnt/demo_volume
+# Create a dedicated folder for pins
+mkdir /mnt/demovolume/pins
+# Share it with everyone: Add read/write/execute permission for all
+chmod a+rwx /mnt/demovolume/pins
+ll /mnt/demovolume
 ```
 
 * The analyst login at `http://ipv4:port`  as "rstudio" with their password,
@@ -76,7 +73,7 @@ then share data with pins.
 # install.packages("pins")
 library(pins)
 
-board <- board_folder("/mnt/demo_volume")
+board <- board_folder("/mnt/demovolume/pins")
 board |> pin_write(mtcars, "mtcars")
 board |> pin_list()
 ```
@@ -87,7 +84,7 @@ board |> pin_list()
 # install.packages("pins")
 library(pins)
 
-board <- board_folder("/mnt/demo_volume")
+board <- board_folder("/mnt/demovolume/pins")
 board |> pin_list()
 board |> pin_read("mtcars")
 ```
