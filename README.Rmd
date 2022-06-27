@@ -64,10 +64,6 @@ Objectives:
 * Share data across team members with pins.
 * Move data around.
 
-### Next (tentative)
-
-* Share droplets across multiple users.
-
 ## Resources
 
 * YouTube [playlist](https://bit.ly/ds-incubator-videos).
