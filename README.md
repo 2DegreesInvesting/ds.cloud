@@ -52,7 +52,11 @@ Objectives:
 
 -   Increase disk space to store more data.
 -   Share data across team members with pins.
--   Move data around.
+-   Move data between:
+    -   a droplet or container and GitHub.
+    -   a droplet and a container.
+    -   multiple containers.
+    -   a droplet and your computer.
 
 ## Resources
 

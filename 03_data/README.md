@@ -94,9 +94,51 @@ Resources:
 * [Share volume across
 droplets](https://www.digitalocean.com/community/tutorials/how-to-set-up-an-nfs-mount-on-ubuntu-18-04).
 
-### Moving data around
+### Move data around
 
-* Move data between a droplet and a container
-* Move data between containers
-* Move data between a droplet or container and GitHub
-* Move data between a droplet and your computer
+#### Move data between a droplet/container and GitHub
+
+* Setup: Install `gh` and use it to authenticate with GitHub.
+
+* Small datasets: Clone a repo and push data to it.
+
+* Bigger data: Upload/download assets to a GitHub release.
+
+#### Move data between a droplet and your computer with `scp`
+
+(Consider using GitHub instead.)
+
+Copy file from a remote host to local host:
+
+```bash
+$ scp username@from_host:file.txt /local/directory/
+```
+
+Copy file from local host to a remote host:
+
+```bash
+$ scp file.txt username@to_host:/remote/directory/
+```
+
+Copy directory from a remote host to local host:
+
+```bash
+$ scp -r username@from_host:/remote/directory/  /local/directory/
+```
+
+Copy directory from local host to a remote host:
+
+```bash
+$ scp -r /local/directory/ username@to_host:/remote/directory/
+```
+
+#### Move data between a droplet and a container
+
+* Docker volumes: Bind mount.
+
+#### Move data between multiple containers
+
+* Docker volumes: Bind mount.
+* Docker volumes: Managed volumes.
+
+
