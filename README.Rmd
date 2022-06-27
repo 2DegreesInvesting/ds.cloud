@@ -72,15 +72,19 @@ Objectives:
 
 * Setup the `gh` CLI.
 * Move small data as usual with Git commits.
-* Move larger data as assets attached to GitHub releases.
+* Create a GitHub release with `gh`.
+* Compress a data set into a single, compressed archive.
+* Upload a data archive as an asset attached to a GitHub release.
+* Download a data archive from an asset attached to a GitHub release.
+* Uncompress the data archive.
 
 ### Next (TBC)
 
 More ways to move data around:
 
-* Move data between a droplet and a container with bind mount volumes.
-* Move data between multiple containers with named volumes managed by Docker.
 * Move data between a droplet and your computer with `scp`.
+* Move data between multiple containers with named volumes managed by Docker.
+* Move data between a droplet and a container with bind mount volumes.
 
 ## Resources
 

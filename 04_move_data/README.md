@@ -70,6 +70,9 @@ Get bigger datasets from assets attached to GitHub releases.
 # If you work from outside the repo that has the assets, use the flag `--repo`
 cd ~
 gh release download v1 -p data.tar.gz --repo 2degreesinvesting/ds.cloud
+
+# Extract (x) the archive file (f) data.tar.gz
+tar xf
 ```
 
 #### Move data between a droplet and your computer with `scp`
