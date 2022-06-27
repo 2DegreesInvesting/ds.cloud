@@ -62,11 +62,25 @@ Objectives:
 
 * Increase disk space to store more data.
 * Share data across team members with pins.
-* Move data between:
-  * a droplet or container and GitHub.
-  * a droplet and a container.
-  * multiple containers.
-  * a droplet and your computer.
+
+### Move data
+
+This meetup covers moving small and bigger data between a server and GitHub
+using the `gh` CLI.
+
+Objectives:
+
+* Setup the `gh` CLI.
+* Move small data as usual with Git commits.
+* Move larger data as assets attached to GitHub releases.
+
+### Next (TBC)
+
+More ways to move data around:
+
+* Move data between a droplet and a container with bind mount volumes.
+* Move data between multiple containers with named volumes managed by Docker.
+* Move data between a droplet and your computer with `scp`.
 
 ## Resources
 
