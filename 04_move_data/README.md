@@ -1,13 +1,13 @@
 ### Move data around
 
-Setup for an example droplet at `174.138.4.109` (your ipv4 will be different).
+Setup an example droplet at `174.138.4.109` (your ipv4 will be different).
 
 ```bash
 # Connect to the droplet
 ssh root@174.138.4.109
 
 # Run a container from https://www.rocker-project.org/
-docker run --rm -d \
+docker run --rm -d --name gh \
   -p 8787:8787 -e PASSWORD=123 \
   -e ROOT=true \
   rocker/verse
