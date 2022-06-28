@@ -51,7 +51,12 @@ git commit -m "New data"
 git push
 ```
 
-Share bigger datasets as assets attached to GitHub releases.
+Share bigger datasets as assets attached to GitHub releases:
+
+> If you need to distribute large files within your repository, you can create releases on GitHub.com.  
+> We don't limit the total size of the binary files in the release or the bandwidth used to deliver them. However, each individual file must be smaller than 2 GB.  
+-- [Distributing large binaries](https://docs.github.com/en/repositories/working-with-files/managing-large-files/about-large-files-on-github#distributing-large-binaries)
+
 
 ```bash
 # Create a GitHub release
