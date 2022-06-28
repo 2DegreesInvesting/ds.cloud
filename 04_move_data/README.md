@@ -1,7 +1,5 @@
 ### Move data around
 
-Setup an example droplet at `174.138.4.109` (your ipv4 will be different).
-
 ```bash
 # Connect to the droplet
 ssh root@174.138.4.109
