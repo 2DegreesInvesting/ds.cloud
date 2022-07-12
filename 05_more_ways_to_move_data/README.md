@@ -58,6 +58,8 @@ ssh root@174.138.4.109
 ```
 
 ```bash
+# Server's terminal
+
 # Run a container from https://www.rocker-project.org/
 docker run --rm -d --name my_container \
   -v volume_managed_by_docker:/home/rstudio/volume_managed_by_docker \
@@ -68,18 +70,41 @@ docker run --rm -d --name my_container \
 ```
 
 ```bash
+# Server's terminal
+
 # `volume_managed_by_docker` is more portable
 # It does not depend on the host's file system
 docker volume ls
-ls /
+
+# If it doesn't exist yet, it's created
+ls /bind_mount
 ```
 
 ```bash
-# Login to rstudio at http://174.138.4.109:8787
+# Container's terminal: http://174.138.4.109:8787
 
 # `/bind_mount` is less portable
 # It depends on the host's file system
 ls /
+
+# Fails
+touch bind_mount/a.csv
+# Works but tedious
+sudo touch bind_mount/a.csv
+
+# More general
+sudo chown -R rstudio:rstudio /home/rstudio
+touch bind_mount/a.csv
+```
+
+Share the data in `volume_managed_by_docker` with another container
+
+```bash
+# Server's terminal
+docker run --rm -ti -v volume_managed_by_docker:/volume_managed_by_docker bash
+
+# Terminal in the new container
+ls /volume_managed_by_docker
 ```
 
 ### Resources
@@ -99,6 +124,7 @@ rm -rf ~/Downloads
 ```bash
 # Remote terminal
 rm -rf /tmp/data
+rm -rf /bind_mount
 docker stop my_container
 docker volume rm docker_volume volume_managed_by_docker
 ```
