@@ -68,14 +68,21 @@ Objectives:
 -   Download a data archive from an asset attached to a GitHub release.
 -   Uncompress the data archive.
 
-### Next (TBC)
+### More ways to move data around
 
-More ways to move data around:
+This meetup covers more ways to move data between your local and remote
+computers.
+
+Objectives:
 
 -   Move data between a droplet and your computer with `scp`.
 -   Move data between multiple containers with named volumes managed by
     Docker.
 -   Move data between a droplet and a container with bind mount volumes.
+
+### Next (TBC)
+
+-   Databases.
 
 ## Resources
 
