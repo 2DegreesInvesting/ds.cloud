@@ -61,9 +61,7 @@ ssh root@174.138.4.109
 # Run a container from https://www.rocker-project.org/
 docker run --rm -d --name my_container \
   -p 8787:8787 -e PASSWORD=123 \
-  # Less portable. Depends on the file system of the host
   -v /bind_mount:/bind_mount \
-  # More portable. Does not depend on the file system of the host
   -v volume_managed_by_docker:/volume_managed_by_docker \
   -e ROOT=true \
   rocker/verse
