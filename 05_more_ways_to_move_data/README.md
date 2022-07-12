@@ -55,7 +55,9 @@ Docker.
 ```bash
 # Connect to the server
 ssh root@174.138.4.109
+```
 
+```bash
 # Run a container from https://www.rocker-project.org/
 docker run --rm -d --name my_container \
   -p 8787:8787 -e PASSWORD=123 \
@@ -65,10 +67,14 @@ docker run --rm -d --name my_container \
   -v volume_managed_by_docker:/volume_managed_by_docker \
   -e ROOT=true \
   rocker/verse
+```
 
+```bash
 docker volume ls
 ls /
+```
 
+```bash
 # Login to rstudio at http://174.138.4.109:8787
 ls /
 ```
