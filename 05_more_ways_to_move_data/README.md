@@ -94,7 +94,10 @@ sudo touch bind_mount/a.csv
 
 # More general
 sudo chown -R rstudio:rstudio /home/rstudio
+
+# Works everywhere under ~
 touch bind_mount/a.csv
+touch volume_managed_by_docker/b.csv
 ```
 
 Share the data in `volume_managed_by_docker` with another container
