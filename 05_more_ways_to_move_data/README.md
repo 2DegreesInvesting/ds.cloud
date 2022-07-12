@@ -76,8 +76,6 @@ ls /
 
 ### Resources
 
-* <https://cloud.digitalocean.com/account/security> > Add SSH Key
-
-* [How to setup SSH keys](https://www.digitalocean.com/community/tutorial_collections/how-to-set-up-ssh-keys).
+* [How to setup SSH keys](https://www.digitalocean.com/community/tutorial_collections/how-to-set-up-ssh-keys), or go to <https://cloud.digitalocean.com/account/security> then "Add SSH Key".
 
 * [`scp` explained](https://phoenixnap.com/kb/linux-scp-command)
