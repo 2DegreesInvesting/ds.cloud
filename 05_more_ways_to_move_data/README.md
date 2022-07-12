@@ -61,8 +61,10 @@ ssh root@174.138.4.109
 # Run a container from https://www.rocker-project.org/
 docker run --rm -d --name my_container \
   -p 8787:8787 -e PASSWORD=123 \
+  
   -v /bind_mount:/bind_mount \
   -v volume_managed_by_docker:/volume_managed_by_docker \
+  
   -e ROOT=true \
   rocker/verse
 ```
