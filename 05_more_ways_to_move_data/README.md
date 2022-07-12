@@ -28,7 +28,9 @@ Copy a directory from local to remote computer:
 ```bash
 # Local terminal
 scp -r data root@174.138.4.109:/tmp
+```
 
+```bash
 # Remote terminal
 ls /tmp/data
 ```
@@ -37,18 +39,10 @@ Copy directory from a remote host to local host:
 
 ```bash
 # Local terminal
-scp -r root@174.138.4.109:/tmp/data /tmp
-ls /tmp/data
+scp -r root@174.138.4.109:/tmp/data ~/Downloads
+ls ~/Downloads/data
 ```
 
-### Cleanup
-
-```bash
-# Local terminal
-rm -rf /tmp/data
-# Remote terminal
-rm -rf /tmp/data
-```
 
 #### Move data between a server and a container, and between containers
 
@@ -59,15 +53,20 @@ Docker.
 -- https://docs.docker.com/storage/volumes/
 
 ```bash
+# Connect to the server
+ssh root@174.138.4.109
+
 # Run a container from https://www.rocker-project.org/
 docker run --rm -d --name my_container \
   -p 8787:8787 -e PASSWORD=123 \
+  # Less portable. Depends on the file system of the host
   -v /bind_mount:/bind_mount \
+  # More portable. Does not depend on the file system of the host
   -v volume_managed_by_docker:/volume_managed_by_docker \
   -e ROOT=true \
   rocker/verse
 
-docker volume
+docker volume ls
 ls /
 
 # Login to rstudio at http://174.138.4.109:8787
@@ -79,3 +78,18 @@ ls /
 * [How to setup SSH keys](https://www.digitalocean.com/community/tutorial_collections/how-to-set-up-ssh-keys), or go to <https://cloud.digitalocean.com/account/security> then "Add SSH Key".
 
 * [`scp` explained](https://phoenixnap.com/kb/linux-scp-command)
+
+### Cleanup
+
+```bash
+# Local terminal
+rm -rf /tmp/data
+rm -rf ~/Downloads
+```
+
+```bash
+# Remote terminal
+rm -rf /tmp/data
+docker stop my_container
+docker volume rm docker_volume volume_managed_by_docker
+```
