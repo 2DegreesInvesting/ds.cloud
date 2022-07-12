@@ -68,12 +68,17 @@ docker run --rm -d --name my_container \
 ```
 
 ```bash
+# `volume_managed_by_docker` is more portable
+# It does not depend on the host's file system
 docker volume ls
 ls /
 ```
 
 ```bash
 # Login to rstudio at http://174.138.4.109:8787
+
+# `/bind_mount` is less portable
+# It depends on the host's file system
 ls /
 ```
 
