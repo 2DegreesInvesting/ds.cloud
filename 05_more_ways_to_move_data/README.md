@@ -117,19 +117,3 @@ ls /volume_managed_by_docker
 * [How to setup SSH keys](https://www.digitalocean.com/community/tutorial_collections/how-to-set-up-ssh-keys), or go to <https://cloud.digitalocean.com/account/security> then "Add SSH Key".
 
 * [`scp` explained](https://phoenixnap.com/kb/linux-scp-command)
-
-### Cleanup
-
-```bash
-# Local terminal
-rm -rf /tmp/data
-rm -rf ~/Downloads
-```
-
-```bash
-# Remote terminal
-rm -rf /tmp/data
-rm -rf /bind_mount
-docker stop my_container
-docker volume rm docker_volume volume_managed_by_docker
-```
